@@ -1,0 +1,272 @@
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:11:42) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: products: SELECT * FROM "products" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: products: SELECT * FROM "products" ):
+  app/controllers/products_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-25 14:11:59) [GET]
+
+ActionController::RoutingError (No route matches "/product" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100725060822)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100725060822')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("products")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:12:34) [GET]
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 63ms (View: 47, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-07-25 14:14:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:23:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"image_url"=>"http://assets1.pragprog.com/images/covers/190x228/betas/rails4.jpg", "title"=>"Agile Web Development with Rails, 4th Edition", "description"=>"<p>Rails just keeps on changing. Rails 3 and Ruby 1.9 bring hundreds of improvements, including new APIs and substantial performance enhancements. The fourth edition of this award-winning classic has been reorganized and refocused so it’s more useful than ever before for developers new to Ruby and Rails.\r\n\r\nRails 3 is a major release—the changes aren’t just incremental, but structural. So we decided to follow suit. This book isn’t just a mild reworking of the previous edition to make it run with the new Rails. Instead, it’s a complete refactoring.\r\n\r\nYou’ll still find the Depot example at the front, but you’ll also find testing knitted right in. Gone are the long reference chapters—that’s what the web does best. Instead you’ll find more targeted information on all the aspects of Rails that you’ll need to be a successful Web developer.</p>"}}
+  [4;36;1mProduct Create (1.0ms)[0m   [0;1mINSERT INTO "products" ("created_at", "title", "image_url", "updated_at", "description") VALUES('2010-07-25 06:23:43', 'Agile Web Development with Rails, 4th Edition', 'http://assets1.pragprog.com/images/covers/190x228/betas/rails4.jpg', '2010-07-25 06:23:43', '<p>Rails just keeps on changing. Rails 3 and Ruby 1.9 bring hundreds of improvements, including new APIs and substantial performance enhancements. The fourth edition of this award-winning classic has been reorganized and refocused so it’s more useful than ever before for developers new to Ruby and Rails.
+
+Rails 3 is a major release—the changes aren’t just incremental, but structural. So we decided to follow suit. This book isn’t just a mild reworking of the previous edition to make it run with the new Rails. Instead, it’s a complete refactoring.
+
+You’ll still find the Depot example at the front, but you’ll also find testing knitted right in. Gone are the long reference chapters—that’s what the web does best. Instead you’ll find more targeted information on all the aspects of Rails that you’ll need to be a successful Web developer.</p>')[0m
+Redirected to http://localhost:3000/products/1
+Completed in 34ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-07-25 14:23:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Load (1.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 40ms (View: 20, DB: 1) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-07-25 14:23:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/products/1/edit]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:23:58) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 42ms (View: 19, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-07-25 14:24:16) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:26:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"image_url"=>"http://assets3.pragprog.com/images/covers/190x228/bmsft.jpg", "title"=>"Everyday Scripting with Ruby: for Teams, Testers, and You", "description"=>"<p>Are you a tester who spends more time manually creating complex test data than using it? A business analyst who seemingly went to college all those years so you can spend your days copying data from reports into spreadsheets? A programmer who can’t finish each day’s task without having to scan through version control system output, looking for the file you want?\r\n\r\nIf so, you’re wasting that computer on your desk. Offload the drudgery to where it belongs, and free yourself to do what you should be doing: thinking. All you need is a scripting language (free!), this book (cheap!), and the dedication to work through the examples and exercises.</p>"}}
+  [4;36;1mProduct Create (0.6ms)[0m   [0;1mINSERT INTO "products" ("created_at", "title", "image_url", "updated_at", "description") VALUES('2010-07-25 06:26:16', 'Everyday Scripting with Ruby: for Teams, Testers, and You', 'http://assets3.pragprog.com/images/covers/190x228/bmsft.jpg', '2010-07-25 06:26:16', '<p>Are you a tester who spends more time manually creating complex test data than using it? A business analyst who seemingly went to college all those years so you can spend your days copying data from reports into spreadsheets? A programmer who can’t finish each day’s task without having to scan through version control system output, looking for the file you want?
+
+If so, you’re wasting that computer on your desk. Offload the drudgery to where it belongs, and free yourself to do what you should be doing: thinking. All you need is a scripting language (free!), this book (cheap!), and the dedication to work through the examples and exercises.</p>')[0m
+Redirected to http://localhost:3000/products/2
+Completed in 33ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-07-25 14:26:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:26:19) [GET]
+  [4;36;1mProduct Load (1.3ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 40ms (View: 24, DB: 1) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100725060822)
+Migrating to AddPriceToProduct (20100725062841)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "products" ADD "price" decimal(8,2) DEFAULT 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100725062841')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("products")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:36:07) [GET]
+  [4;35;1mProduct Load (1.1ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 44ms (View: 28, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:36:09) [GET]
+  [4;36;1mProduct Load (1.2ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 44ms (View: 26, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:36:09) [GET]
+  [4;35;1mProduct Load (1.1ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 34ms (View: 19, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-07-25 14:36:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/products/1/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-07-25 14:37:00) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "id"=>"1", "product"=>{"price"=>"95.00", "image_url"=>"http://assets1.pragprog.com/images/covers/190x228/betas/rails4.jpg", "title"=>"Agile Web Development with Rails, 4th Edition", "description"=>"<p>Rails just keeps on changing. Rails 3 and Ruby 1.9 bring hundreds of improvements, including new APIs and substantial performance enhancements. The fourth edition of this award-winning classic has been reorganized and refocused so it’s more useful than ever before for developers new to Ruby and Rails.\r\n\r\nRails 3 is a major release—the changes aren’t just incremental, but structural. So we decided to follow suit. This book isn’t just a mild reworking of the previous edition to make it run with the new Rails. Instead, it’s a complete refactoring.\r\n\r\nYou’ll still find the Depot example at the front, but you’ll also find testing knitted right in. Gone are the long reference chapters—that’s what the web does best. Instead you’ll find more targeted information on all the aspects of Rails that you’ll need to be a successful Web developer.</p>"}}
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;36;1mProduct Update (0.4ms)[0m   [0;1mUPDATE "products" SET "updated_at" = '2010-07-25 06:37:00', "price" = 95.0 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/products/1
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/products/1]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-07-25 14:37:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:37:02) [GET]
+  [4;36;1mProduct Load (1.1ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 41ms (View: 25, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-07-25 14:37:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/products/2/edit]
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-07-25 14:37:26) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "id"=>"2", "product"=>{"price"=>"49.80", "image_url"=>"http://assets3.pragprog.com/images/covers/190x228/bmsft.jpg", "title"=>"Everyday Scripting with Ruby: for Teams, Testers, and You", "description"=>"<p>Are you a tester who spends more time manually creating complex test data than using it? A business analyst who seemingly went to college all those years so you can spend your days copying data from reports into spreadsheets? A programmer who can’t finish each day’s task without having to scan through version control system output, looking for the file you want?\r\n\r\nIf so, you’re wasting that computer on your desk. Offload the drudgery to where it belongs, and free yourself to do what you should be doing: thinking. All you need is a scripting language (free!), this book (cheap!), and the dedication to work through the examples and exercises.</p>"}}
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+  [4;35;1mProduct Update (0.6ms)[0m   [0mUPDATE "products" SET "updated_at" = '2010-07-25 06:37:26', "price" = 49.8 WHERE "id" = 2[0m
+Redirected to http://localhost:3000/products/2
+Completed in 33ms (DB: 1) | 302 Found [http://localhost/products/2]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-07-25 14:37:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:37:28) [GET]
+  [4;35;1mProduct Load (1.2ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 41ms (View: 25, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-07-25 14:37:35) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 111ms (View: 94, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:38:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"99.00", "image_url"=>"http://assets0.pragprog.com/images/covers/190x228/ruby.jpg", "title"=>"Programming Ruby: The Pragmatic Programmers' Guide, Second Edition", "description"=>"<p>The Pickaxe book, named for the tool on the cover, is the definitive reference to Ruby, a highly-regarded, fully object-oriented programming language. This Second Edition has more than 200 pages of new content, and substantial enhancements to the original, covering all the new and improved language features of Ruby 1.8 and standard library modules.</p>"}}
+  [4;36;1mProduct Create (0.8ms)[0m   [0;1mINSERT INTO "products" ("price", "created_at", "title", "image_url", "updated_at", "description") VALUES(99.0, '2010-07-25 06:38:58', 'Programming Ruby: The Pragmatic Programmers'' Guide, Second Edition', 'http://assets0.pragprog.com/images/covers/190x228/ruby.jpg', '2010-07-25 06:38:58', '<p>The Pickaxe book, named for the tool on the cover, is the definitive reference to Ruby, a highly-regarded, fully object-oriented programming language. This Second Edition has more than 200 pages of new content, and substantial enhancements to the original, covering all the new and improved language features of Ruby 1.8 and standard library modules.</p>')[0m
+Redirected to http://localhost:3000/products/3
+Completed in 34ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-07-25 14:38:58) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 27ms (View: 9, DB: 1) | 200 OK [http://localhost/products/3]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:39:00) [GET]
+  [4;36;1mProduct Load (1.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 54ms (View: 36, DB: 2) | 200 OK [http://localhost/products]
