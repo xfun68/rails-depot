@@ -270,3 +270,284 @@ Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:39:00) [GET]
 Rendering template within layouts/products
 Rendering products/index
 Completed in 54ms (View: 36, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:45:06) [GET]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 33ms (View: 14, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-07-25 14:45:08) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:45:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"10.0", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:46:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"10.0", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 69ms (View: 46, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:46:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"lll", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 143ms (View: 119, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:46:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"123", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 52ms (View: 28, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:49:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.0001", "image_url"=>"", "title"=>"", "description"=>""}}
+
+SyntaxError (/home/xfun68/rails/depot/app/models/product.rb:6: syntax error, unexpected ':', expecting kEND
+/home/xfun68/rails/depot/app/models/product.rb:8: syntax error, unexpected tOROP
+...least 0.01') if price.nil ? || price < 0.01
+                              ^):
+  app/controllers/products_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:49:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.001", "image_url"=>"", "title"=>"", "description"=>""}}
+
+SyntaxError (/home/xfun68/rails/depot/app/models/product.rb:6: syntax error, unexpected ':', expecting kEND
+/home/xfun68/rails/depot/app/models/product.rb:8: syntax error, unexpected tOROP
+...least 0.01') if price.nil ? || price < 0.01
+                              ^):
+  app/controllers/products_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:50:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.001", "image_url"=>"", "title"=>"", "description"=>""}}
+
+SyntaxError (/home/xfun68/rails/depot/app/models/product.rb:6: syntax error, unexpected ':', expecting kEND
+/home/xfun68/rails/depot/app/models/product.rb:8: syntax error, unexpected tOROP
+...east 0.01') if :price.nil ? || :price < 0.01
+                              ^):
+  app/controllers/products_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (127.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:50:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.001", "image_url"=>"", "title"=>"", "description"=>""}}
+
+SyntaxError (/home/xfun68/rails/depot/app/models/product.rb:6: syntax error, unexpected ':', expecting kEND
+/home/xfun68/rails/depot/app/models/product.rb:8: syntax error, unexpected tOROP
+...east 0.01') if :price.nil ? || :price < 0.01
+                              ^):
+  app/controllers/products_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:50:53) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.001", "image_url"=>"", "title"=>"", "description"=>""}}
+
+SyntaxError (/home/xfun68/rails/depot/app/models/product.rb:8: syntax error, unexpected tOROP
+...least 0.01') if price.nil ? || price < 0.01
+                              ^):
+  app/controllers/products_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:51:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.001", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:51:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.0001", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 73ms (View: 50, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:51:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.0001", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 53ms (View: 30, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:51:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 38ms (View: 17, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:51:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.01", "image_url"=>"", "title"=>"", "description"=>""}}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 52ms (View: 29, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:54:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.01", "image_url"=>"", "title"=>"", "description"=>""}}
+
+NoMethodError (undefined method `titel' for #<Product:0xb5ceaa1c>):
+  app/controllers/products_controller.rb:46
+  app/controllers/products_controller.rb:45:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:55:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"0.01", "image_url"=>"", "title"=>"", "description"=>""}}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 83ms (View: 56, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:57:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"79.00", "image_url"=>"http://headfirstlabs.com/Images/hfhtml_cover.ddd", "title"=>"Head First HTML with CSS & XHTML", "description"=>"<p>You want to learn HTML so you can finally create those web pages you've always wanted, so you can communicate more effectively with friends, family, fans, and fanatic customers. You also want to do it right so you can actually maintain and expand your Web pages over time, and so your web pages work in all the browsers and mobile devices out there. Oh, and if you've never heard of CSS, that's okay—we won't tell anyone you're still partying like it's 1999—but if you're going to create Web pages in the 21st century then you'll want to know and understand CSS.\r\n\r\nLearn the real secrets of creating Web pages, and why everything your boss told you about HTML tables is probably wrong (and what to do instead). Most importantly, hold your own with your co-worker (and impress cocktail party guests) when he casually mentions how his HTML is now strict, and his CSS is in an external style sheet.\r\n\r\nSo what are you waiting for? Leave those other dusty books behind and come join us in Webville. Your tour is about to begin.</p>"}}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Head First HTML with CSS & XHTML') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 46ms (View: 17, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:58:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"79.00", "image_url"=>"http://headfirstlabs.com/Images/hfhtml_cover.gif", "title"=>"Head First HTML with CSS & XHTML", "description"=>"<p>You want to learn HTML so you can finally create those web pages you've always wanted, so you can communicate more effectively with friends, family, fans, and fanatic customers. You also want to do it right so you can actually maintain and expand your Web pages over time, and so your web pages work in all the browsers and mobile devices out there. Oh, and if you've never heard of CSS, that's okay—we won't tell anyone you're still partying like it's 1999—but if you're going to create Web pages in the 21st century then you'll want to know and understand CSS.\r\n\r\nLearn the real secrets of creating Web pages, and why everything your boss told you about HTML tables is probably wrong (and what to do instead). Most importantly, hold your own with your co-worker (and impress cocktail party guests) when he casually mentions how his HTML is now strict, and his CSS is in an external style sheet.\r\n\r\nSo what are you waiting for? Leave those other dusty books behind and come join us in Webville. Your tour is about to begin.</p>"}}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Head First HTML with CSS & XHTML') LIMIT 1[0m
+  [4;35;1mProduct Create (0.3ms)[0m   [0mINSERT INTO "products" ("price", "created_at", "title", "image_url", "updated_at", "description") VALUES(79.0, '2010-07-25 06:58:17', 'Head First HTML with CSS & XHTML', 'http://headfirstlabs.com/Images/hfhtml_cover.gif', '2010-07-25 06:58:17', '<p>You want to learn HTML so you can finally create those web pages you''ve always wanted, so you can communicate more effectively with friends, family, fans, and fanatic customers. You also want to do it right so you can actually maintain and expand your Web pages over time, and so your web pages work in all the browsers and mobile devices out there. Oh, and if you''ve never heard of CSS, that''s okay—we won''t tell anyone you''re still partying like it''s 1999—but if you''re going to create Web pages in the 21st century then you''ll want to know and understand CSS.
+
+Learn the real secrets of creating Web pages, and why everything your boss told you about HTML tables is probably wrong (and what to do instead). Most importantly, hold your own with your co-worker (and impress cocktail party guests) when he casually mentions how his HTML is now strict, and his CSS is in an external style sheet.
+
+So what are you waiting for? Leave those other dusty books behind and come join us in Webville. Your tour is about to begin.</p>')[0m
+Redirected to http://localhost:3000/products/4
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-07-25 14:58:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/products/4]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:58:23) [GET]
+  [4;35;1mProduct Load (3.1ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 50ms (View: 26, DB: 3) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-07-25 14:58:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 43ms (View: 25, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-07-25 14:58:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"40YscksOEoIehwQqjiYVBqWW+fFKFlylVy0PW7XMUBI=", "product"=>{"price"=>"10.0", "image_url"=>"http://headfirstlabs.com/Images/hfhtml_cover.gif", "title"=>"Head First HTML with CSS & XHTML", "description"=>"dfsaf"}}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Head First HTML with CSS & XHTML') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 22ms (View: 11, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-07-25 14:58:44) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/products]
