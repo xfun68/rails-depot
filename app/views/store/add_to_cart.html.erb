@@ -2,6 +2,6 @@
 
 <ul>
   <% for item in @cart.items %>
-    <li><%= h item.title %></li>
+    <li><%= item.quantity %> &times; <%= h item.title %></li>
   <% end %>
 </ul>
