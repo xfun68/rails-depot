@@ -18,9 +18,9 @@
       <a href="http://www..../news">News</a><br />
       <a href="http://www..../contact">Contact</a><br />
 
-      <div id="cart">
+      <% hidden_div_if(@cart.items.empty?, :id => 'cart') do %>
         <%= render(:partial => "cart", :object => @cart) %>
-      </div>
+      <% end %>
     </div>
 
     <div id="main">
