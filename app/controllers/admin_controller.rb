@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+
   def login
     if request.post?
       user = User.authenticate(params[:name], params[:password])
@@ -15,6 +16,7 @@ class AdminController < ApplicationController
   end
 
   def index
+    @total_orders = Order.count
   end
 
 end
